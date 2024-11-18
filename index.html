@@ -31,13 +31,18 @@
             align-items: center;
         }
 
-        .content {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.8); /* Slightly darker overlay */
-            padding: 20px;
-            border-radius: 15px;
-            max-width: 600px;
-        }
+.content {
+    text-align: left; /* Align text to the left */
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column; /* Ensure child elements stack vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align content to the left inside the box */
+}
+
 
         .content h1 {
             margin-bottom: 20px;
