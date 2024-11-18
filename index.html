@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Illinois_Roadbuff</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-
     <style>
-     
         @font-face {
-    font-family: 'HighwayGothicExpanded';
-    src: url('HWYGEXPD.ttf') format('truetype');
-}
-
+            font-family: 'HighwayGothicExpanded';
+            src: url('HWYGEXPD.ttf') format('truetype');
+        }
 
         body {
             margin: 0;
@@ -32,69 +28,107 @@
             justify-content: center;
             align-items: center;
         }
- 
 
-.content {
-    text-align: left; /* Align text to the left */
-    background: rgba(10, 10, 10, 0.6);
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column; /* Ensure child elements stack vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: flex-start; /* Align content to the left inside the box */
-        padding-bottom: 10px; 
-    margin-bottom: 0;
-
- box-shadow: 0px 4px 235px rgba(0, 0, 0, 0.5);
-     -webkit-touch-callout: none;
-       -webkit-user-select: none;
-       -khtml-user-select: none;
-       -moz-user-select: none;
-       -ms-user-select: none;
-        user-select: none;
-}
-
+        .content {
+            text-align: left; /* Align text to the left */
+            background: rgba(10, 10, 10, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 90%; /* Ensure content doesn't stretch too much */
+            width: 600px; /* Set a max width for large screens */
+            display: flex;
+            flex-direction: column; /* Ensure child elements stack vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: flex-start; /* Align content to the left inside the box */
+            padding-bottom: 10px;
+            margin-bottom: 0;
+            box-shadow: 0px 4px 235px rgba(0, 0, 0, 0.5);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
         .content h1 {
-
-margin-top: 0; 
-    padding-top: 0; 
-    margin-bottom: 10px; 
+            margin-top: 0;
+            padding-top: 0;
+            margin-bottom: 10px;
         }
 
         .content ul {
             list-style: circle;
-           padding-left: 20px;
-               font-size: 1.2rem;
+            padding-left: 20px;
+            font-size: 1.2rem;
         }
 
- .content li {
-
-      font-size: 0.9rem;
+        .content li {
+            font-size: 0.9rem;
         }
 
         .content ul li {
-            
             margin: 5px 0;
-            margin-top: 0; 
-              margin-bottom: 5px; 
+            margin-top: 0;
+            margin-bottom: 5px;
         }
 
         .content p {
-margin: 0;
-    margin-bottom: 0px; 
-}
-                .content t {
+            margin: 0;
+            margin-bottom: 0px;
+        }
 
-    margin-bottom: 3px; 
-}
-                        .content ty {
-    margin-bottom: 10px; 
-                            font-size: 0.8rem;
-}
+        .content t {
+            margin-bottom: 3px;
+        }
 
+        .content ty {
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* Make text sizes responsive */
+        @media (max-width: 768px) {
+            .content {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .content h1 {
+                font-size: 1.8rem;
+            }
+
+            .content p,
+            .content ul,
+            .content li {
+                font-size: 1rem;
+            }
+
+            .content ul {
+                padding-left: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .content h1 {
+                font-size: 1.6rem;
+            }
+
+            .content p,
+            .content ul,
+            .content li {
+                font-size: 0.9rem;
+            }
+
+            .content ul {
+                padding-left: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,12 +137,12 @@ margin: 0;
             <h1>Illinois_Roadbuff</h1>
             <t>Welcome to my about page!</t>
             <ty>📌 Greater Chicago Area, Illinois, USA ⌚ Central Standard Time (UTC/GMT -06:00)</ty>
-             <p>Coding</p>
+            <p>Coding</p>
             <ul>
                 <li>Advanced in Luau (Roblox scripting language)</li>
                 <li>Currently learning JavaScript and HTML</li>
             </ul>
-             <p>Tools/Programs</p>
+            <p>Tools/Programs</p>
             <ul>
                 <li>(Expert) Primarily use Roblox Studio for game development and coding</li>
                 <li>(Beginner) Sometimes use Blender to optimize meshes</li>
@@ -118,7 +152,7 @@ margin: 0;
                 <li>(Primary/Development) I share development updates (and sometimes other content) on my primary channel</li>
                 <li>(Personal) I usually post road trip videos and other random content on my personal channel</li>
             </ul>
-             <p>Presentations</p>
+            <p>Presentations</p>
             <ul>
                 <li>Skilled at creating presentations, primarily using PowerPoint</li>
             </ul>
