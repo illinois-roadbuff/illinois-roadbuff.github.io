@@ -7,6 +7,8 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
        
+       
+       
         @font-face {
             font-family: 'HighwayGothicExpanded';
             src: url('HWYGEXPD.ttf') format('truetype');
@@ -39,7 +41,7 @@
             width: 600px; /* Set a max width for large screens */
             display: flex;
             flex-direction: column; /* Ensure child elements stack vertically */
-            justify-content: center; /* Center content vertically */
+            justify-content: top; /* Center content vertically */
             align-items: flex-start; /* Align content to the left inside the box */
             padding-bottom: 10px;
             margin-bottom: 0;
@@ -50,23 +52,26 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-overflow: auto;
+max-height: 70%;
+overflow-y: auto;
+
+
         }
 
         .content h1 {
             margin-top: 0;
             padding-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 2%;
         }
 
         .content ul {
             list-style: circle;
-            padding-left: 20px;
-            font-size: 1.2rem;
+            padding-left: 4%;
+            font-size: 100%;
         }
 
         .content li {
-            font-size: 0.9rem;
+            font-size: 12px;
         }
 
         .content ul li {
@@ -86,7 +91,7 @@ overflow: auto;
 
         .content ty {
             margin-bottom: 10px;
-            font-size: 0.8rem;
+            font-size: 10px;
         }
 
         /* Make text sizes responsive */
@@ -97,13 +102,13 @@ overflow: auto;
             }
 
             .content h1 {
-                font-size: 1.8rem;
+                font-size: 17px;
             }
 
             .content p,
             .content ul,
             .content li {
-                font-size: 1rem;
+                font-size: 10px;
             }
 
             .content ul {
@@ -118,19 +123,21 @@ overflow: auto;
             }
 
             .content h1 {
-                font-size: 1.6rem;
+                font-size: 15px;
             }
 
             .content p,
             .content ul,
             .content li {
-                font-size: 0.9rem;
+                font-size: 11px;
             }
 
             .content ul {
                 padding-left: 10px;
             }
         }
+    
+    
     
     </style>
 </head>
