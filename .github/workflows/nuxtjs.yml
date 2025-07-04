@@ -1,4 +1,4 @@
-name: Deploy Nuxt site to Pages
+name: Deploy Nuxt site to GitHub Pages
 
 on:
   push:
@@ -10,16 +10,12 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Setup Node.js 20
@@ -36,7 +32,7 @@ jobs:
       - name: Install dependencies with pnpm
         run: pnpm install
 
-      - name: Rebuild better-sqlite3 native module
+      - name: Rebuild better-sqlite3 native bindings
         run: pnpm rebuild better-sqlite3
 
       - name: Build Nuxt site with Nitro preset for GitHub Pages
