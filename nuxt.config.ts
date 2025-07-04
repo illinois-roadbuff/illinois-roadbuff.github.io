@@ -50,7 +50,7 @@ export default defineNuxtConfig({
   vite: {
     resolve: {
       alias: {
-        '../../../../../assets/shader-worker-CJN-6C3l.js': '/assets/shader-worker-CJN-6C3l.js',
+        '../../../../../assets/shader-worker-CJN-6C3l.js': 'app/assets/shader-worker-CJN-6C3l.js',
       },
     },
   },
