@@ -18,7 +18,7 @@ onMounted(() => {
       if (flashCount >= maxFlashes) {
         clearInterval(interval)
         flashRed.value = false
-        window.location.href = 'https://fakebsod.com/windows-8-and-10/'
+        window.location.href = 'https://youtu.be/dQw4w9WgXcQ'
       }
     }, 10)
   } else {
