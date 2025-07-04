@@ -1,0 +1,35 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+  <main class="select-none flex items-center justify-center min-h-screen z-50 text-white/85">
+    <div
+      class="relative z-50 grid max-w-[800px] w-[800px] h-auto px-10 py-8 rounded-[16px]
+             backdrop-blur-xl bg-white/10 border border-white/20 shadow-xl"
+    >
+      <div class="flex justify-between items-start w-full text-shadow-lg relative z-10">
+       
+        <div class="flex-1 pr-7">
+          <h3 class="text-3xl RG2014EM leading-none text-white/95">
+            Illinois_Roadbuff — Jr
+          </h3>
+
+          <div class="space-y-2">
+            <p class="text-1xl RG2014EM text-white/85 text-2xl">
+              Welcome to Illinois_Roadbuff's Center!
+            </p>
+            <p class="text-1xl RG2014EM text-white/85 text-1xl">
+              Use the top navigation bar to view different pages.
+            </p>
+          </div>
+        </div>
+
+     
+        <div class="shrink-0">
+          <img src="/profile.png" alt="Profile" class="w-11 h-11 block" />
+        </div>
+      </div>
+    </div>
+  </main>
+</template>
