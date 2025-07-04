@@ -201,8 +201,8 @@
                 </p>
                 <p class="text-[#efb680]/85 text-base">
                   <a class="RG2014E">Shoot me an email: </a>
-                  <a
-                    href="https://www.openstreetmap.org/relation/112927"
+                  <a 
+                    href="mailto:illinois_roadbuff@proton.me"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200 RG2014D"
