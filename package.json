@@ -11,8 +11,10 @@
     "generate:backgrounds": "node generate-backgrounds-json.js",
     "deploy": "npx nuxt build --preset github_pages && npx gh-pages --dotfiles -d .output/public ",
     "test": "npx nuxt build --preset github_pages && npx serve .output/public ",
- "create:fork-friendly": "git checkout master && (git checkout fork-friendly || git checkout -b fork-friendly) && git rm -r --cached public && git commit -m \"Update fork-friendly branch\" || echo 'No changes' && git push -u origin fork-friendly && git checkout master",
-  "deploy:ff": "npx nuxt build --preset github_pages && npx gh-pages --dotfiles -d .output/public && git checkout master && (git checkout fork-friendly || git checkout -b fork-friendly) && git rm -r --cached public && git commit -m \"Update fork-friendly branch\" || echo 'No changes' && git push -u origin fork-friendly && git checkout master"
+"create:fork-friendly": "git checkout master && (git checkout fork-friendly || git checkout -b fork-friendly) && git merge master && git rm -r --cached public && git commit -m \"Update fork-friendly branch\" || echo 'No changes' && git push -u origin fork-friendly && git checkout master",
+  
+  "deploy:ff": "npx nuxt build --preset github_pages && npx gh-pages --dotfiles -d .output/public && git checkout master && (git checkout fork-friendly || git checkout -b fork-friendly) && git merge master && git rm -r --cached public && git commit -m \"Update fork-friendly branch\" || echo 'No changes' && git push -u origin fork-friendly && git checkout master"
+
   },
   "dependencies": {
     "@iconify-json/simple-icons": "^1.2.41",
