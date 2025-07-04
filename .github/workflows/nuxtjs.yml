@@ -47,6 +47,11 @@ jobs:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
+      - name: Install pnpm
+        if: steps.detect-package-manager.outputs.manager == 'pnpm'
+        run: npm install -g pnpm
+
+
       - name: Cache pnpm store
         if: steps.detect-package-manager.outputs.manager == 'pnpm'
         uses: actions/cache@v4
