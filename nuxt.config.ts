@@ -44,7 +44,7 @@ export default defineNuxtConfig({
 
   
 
-
+  ssr: true,
 
   nitro: {
     preset: 'github_pages',
