@@ -1,7 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-15',
+
+  compatibilityDate: '2025-07-04',
   devtools: { enabled: true },
+
+  app: {
+    baseURL: '/',
+   head: {
+     title: 'Illinois_Roadbuff', 
+     meta: [
+       { name: 'description', content: 'Illinois_Roadbuffs Center.' }
+     ],
+     link: [
+       { rel: 'icon', type: 'image/ico', href: '/icons/profile.ico' } 
+     ]
+   },
+  
+ },
 
   future: {
     compatibilityVersion: 4,
@@ -34,27 +49,10 @@ export default defineNuxtConfig({
       dir: '~~/assets/icons'
     }]
   },
-  app: {
-    head: {
-      title: 'Illinois_Roadbuff', 
-      meta: [
-        { name: 'description', content: 'Illinois_Roadbuffs Center.' }
-      ],
-      link: [
-        { rel: 'icon', type: 'image/ico', href: '/icons/profile.ico' } 
-      ]
-    },
-    baseURL: '/'
-  },
 
-  vite: {
-    resolve: {
-      alias: {
-        '../../../../../assets/shader-worker-CJN-6C3l.js': 'app/assets/shader-worker-CJN-6C3l.js',
-      },
-    },
-  },
+
+
   nitro: {
-    preset: 'static',
+    preset: 'github_pages',
   }
 })
