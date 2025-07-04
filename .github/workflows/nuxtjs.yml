@@ -1,10 +1,18 @@
-name: Deploy to GitHub Pages
+name: Deploy Nuxt site to Pages
 
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - master
+    branches: ["master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -14,21 +22,24 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Setup Node.js 20
         uses: actions/setup-node@v3
         with:
           node-version: "20"
 
+      - name: Install build dependencies for native modules
+        run: sudo apt-get update && sudo apt-get install -y build-essential python3
+
       - name: Install pnpm globally
         run: npm install -g pnpm
 
-      - name: Verify pnpm installation
-        run: pnpm --version
-
-      - name: Install dependencies
+      - name: Install dependencies with pnpm
         run: pnpm install
 
-      - name: Build site with Nitro preset for GitHub Pages
+      - name: Rebuild better-sqlite3 native module
+        run: pnpm rebuild better-sqlite3
+
+      - name: Build Nuxt site with Nitro preset for GitHub Pages
         env:
           NITRO_PRESET: github_pages
         run: pnpm run build
