@@ -1,1 +1,0 @@
-import{f as e,c as o,o as n}from"./DuDzm_wb.js";const s={__name:"index",setup(t){return e(()=>{window.location.href="/home"}),(c,r)=>(n(),o("p",null,"Redirecting to /home..."))}};export{s as default};
