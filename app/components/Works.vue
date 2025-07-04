@@ -85,7 +85,7 @@
         </div>
 
         <div class="shrink-0">
-          <img src="/profile.png" alt="Profile" class="w-11 h-11 block" />
+          <img src="/images/profile.png" alt="Profile" class="w-11 h-11 block" />
         </div>
       </div>
     </div>

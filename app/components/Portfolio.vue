@@ -52,7 +52,7 @@ const chicagoInfo = computed(() => getChicagoTimeInfo())
 </script>
 
 <template>
-  <main class="select-none flex items-center justify-center min-h-screen z-50 text-white/85">
+  <main class="select-none flex items-center justify-center min-h-screen z-50 text-white/85 overflowing-auto">
     <div
       class="relative z-50 grid max-w-[800px] w-[800px] h-auto px-10 py-8 rounded-[16px]
              backdrop-blur-xl bg-white/10 border border-white/20 shadow-xl"
@@ -233,7 +233,7 @@ const chicagoInfo = computed(() => getChicagoTimeInfo())
               <li class="text-[#efb680]/85">
                 <a class="RG2014EM">Executive + Universe Builder</a> ➔
                 <a
-                  href="https://www.openstreetmap.org/relation/112927"
+                  href="https://www.roblox.com/communities/34040858/RLDXL-Corporation#!/about"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
@@ -244,20 +244,19 @@ const chicagoInfo = computed(() => getChicagoTimeInfo())
             <hr class="my-4 border-t border-[#b87333]/60" />
             <p class="text-1xl RG2014EM text-white/85">Works</p>
             <p class="text-base RG2014EEM">
-              <a
-                href="https://www.openstreetmap.org/relation/112927"
-                target="_blank"
-                rel="noopener noreferrer"
+              <<NuxtLink 
+                to="/portfolio/works"
+               
                 class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
               >
                 View my works ↗
-              </a>
+              </NuxtLink>
             </p>
           </div>
         </div>
 
         <div class="shrink-0">
-          <img src="/profile.png" alt="Profile" class="w-11 h-11 block" />
+          <img src="/images/profile.png" alt="Profile" class="w-11 h-11 block" />
         </div>
       </div>
     </div>

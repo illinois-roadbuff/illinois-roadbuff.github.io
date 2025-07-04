@@ -54,7 +54,7 @@ onMounted(async () => {
       return
     }
     images.value = await res.json()
-    // Initialize both images to the first random image to avoid flash
+ 
     const initialIndex = Math.floor(Math.random() * images.value.length)
     currentImage.value = images.value[initialIndex]
     nextImage.value = images.value[initialIndex]
@@ -62,7 +62,7 @@ onMounted(async () => {
     setTimeout(() => {
       switchToRandomImage()
       setInterval(switchToRandomImage, 15000)
-    }, 100) // small delay to allow first image to load
+    }, 100) 
   } catch (e) {
     console.error('Error loading backgrounds-list.json:', e)
   }
@@ -90,7 +90,7 @@ onMounted(async () => {
       ></div>
     </div>
 
-    <!-- Foreground content -->
+   
     <div class="page-content">
       <<NuxtLayout >
         <NuxtPage :key="$route.fullPath" />
@@ -98,7 +98,7 @@ onMounted(async () => {
     
     </div>
 
-    <!-- Footer should be above everything -->
+ 
     <footer class="footer RG2014EEM text-base">
       <p>
         © 2025 Illinois_Roadbuff. Source code licensed under 
@@ -121,10 +121,10 @@ onMounted(async () => {
 .background-container {
   position: fixed;
   inset: 0;
-  z-index: -2; /* Behind everything */
+  z-index: -2; 
   overflow: hidden;
   pointer-events: none;
-  background-color: black; /* <-- ADD THIS LINE */
+  background-color: black; 
 }
 
 .background-layer {
@@ -146,9 +146,29 @@ onMounted(async () => {
 
 .page-content {
   position: relative;
-  padding: 5rem 1rem 1rem; /* top padding to avoid navbar overlap */
+  flex: 1 1 auto;
+  padding: 1rem; 
+  overflow-y: auto;
+  box-sizing: border-box; 
 }
 
+
+.overflowing-auto {
+  overflow: auto;
+}
+
+html, body, #__nuxt {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#__nuxt {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 
 </style>
