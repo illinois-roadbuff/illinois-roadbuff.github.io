@@ -46,6 +46,15 @@ export default defineNuxtConfig({
     },
     baseURL: '/'
   },
-  ssr: false,
-  target: 'static',
+
+  vite: {
+    resolve: {
+      alias: {
+        '../../../../../assets/shader-worker-CJN-6C3l.js': '/assets/shader-worker-CJN-6C3l.js',
+      },
+    },
+  },
+  nitro: {
+    preset: 'static',
+  }
 })
