@@ -35,18 +35,13 @@ export default defineNuxtConfig({
   ],
 
   css: [
-    '~/app/assets/css/tailwind.css',
-    '~/app/assets/css/main.css'
+    '~/assets/css/tailwind.css',
+    '~/assets/css/main.css'
   ],
   plugins: [
-    { src: '~/app/plugins/liquid-glass.client.ts', mode: 'client' }
+    { src: '~/plugins/liquid-glass.client.ts', mode: 'client' }
   ],
-  icon: {
-    customCollections: [{
-      prefix: 'custom',
-      dir: '~~/app/assets/icons'
-    }]
-  },
+
   
 
 
