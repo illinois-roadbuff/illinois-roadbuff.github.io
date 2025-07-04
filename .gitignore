@@ -24,4 +24,4 @@ logs
 !.env.example
 
 # Ignore public folder
-/public
+public/
