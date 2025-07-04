@@ -1,5 +1,5 @@
 name: Deploy Nuxt site to Pages
-# LET ME USE PNPM!!!!!!!!!!!!!!
+# JUST LET ME USE PNPM UGH
 on:
   push:
     branches: ["master"]
@@ -21,6 +21,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+
+      - name: Install pnpm globally
+        run: npm install -g pnpm
+
+
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -41,15 +52,6 @@ jobs:
             exit 1
           fi
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
-
-      - name: Install pnpm globally
-        run: npm install -g pnpm
-
       - name: Cache pnpm store
         if: steps.detect-package-manager.outputs.manager == 'pnpm'
         uses: actions/cache@v4
@@ -59,11 +61,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: nuxt
 
+   
       - name: Restore build cache
         uses: actions/cache@v4
         with:
@@ -74,8 +78,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nuxt-build-
 
+ 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
 
       - name: Generate static site
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
