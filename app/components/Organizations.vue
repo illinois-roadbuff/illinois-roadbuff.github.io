@@ -21,7 +21,7 @@
               <li class="text-[#efb680]/85">
                 <a class="RG2014EM">Illinois_Roadbuff's Development</a> ➔
                 <a
-                  href="https://www.openstreetmap.org/relation/112927"
+                  href="https://devforum.roblox.com/t/3624402"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
@@ -30,7 +30,7 @@
               <li class="text-[#efb680]/85">
                 <a class="RG2014EM">Astute-Corrider Initiative</a> ➔
                 <a
-                  href="https://www.openstreetmap.org/relation/112927"
+                  href="https://codeberg.org/Astute-Corridor"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
@@ -41,7 +41,7 @@
         </div>
 
         <div class="shrink-0">
-          <img src="/profile.png" alt="Profile" class="w-11 h-11 block" />
+          <img src="/images/profile.png" alt="Profile" class="w-11 h-11 block" />
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  if (process.client) {
+  if (import.meta.client) {
     window.location.href = '/home' 
   }
 })

@@ -2,8 +2,8 @@
 import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
-// Define valid keys as a union type
-type SocialKey = 'discord' | 'github' | 'youtube' | 'codeberg' | 'guilded' | 'apple' | 'robloxdev' | 'roblox' | 'wikipedia' | 'bandcamp' | 'orcid'
+
+type SocialKey = 'discord' | 'github' | 'youtube' | 'codeberg' | 'guilded' | 'apple' | 'robloxdev' | 'roblox' | 'wikipedia' | 'bandcamp' 
 
 const socials: Record<SocialKey, string> = {
     github: 'https://github.com/illinois-roadbuff',
@@ -16,7 +16,7 @@ const socials: Record<SocialKey, string> = {
    robloxdev: 'https://devforum.roblox.com/u/illinois_roadbuff/',
    wikipedia: 'https://en.wikipedia.org/w/index.php?title=User:Illinois-Roadbuff',
    bandcamp: 'https://illinois-roadbuff.bandcamp.com/',
-   orcid: 'https://orcid.org/0009-0009-6250-0821',
+
    roblox: 'https://www.roblox.com/users/2653606809/profile',
  
   
@@ -30,7 +30,7 @@ onMounted(() => {
 
   for (const key of queryKeys) {
     if (key in socials) {
-      // Use type assertion to tell TypeScript this is a SocialKey
+     
       const socialKey = key as SocialKey
       window.location.href = socials[socialKey]
       break

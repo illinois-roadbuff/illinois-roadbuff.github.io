@@ -215,20 +215,19 @@
               <hr class="my-3 border-t border-[#b87333]/60" />
 
               <p class="text-base RG2014EEM">
-                <a
-                  href="https://www.openstreetmap.org/relation/112927"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <NuxtLink
+                  to="/portfolio"
+                
                   class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
                 >
                   View my portfolio ↗
-                </a>
+              </NuxtLink>
               </p>
             </div>
           </div>
 
           <div class="shrink-0">
-            <img src="/profile.png" alt="Profile" class="w-11 h-11 block" />
+            <img src="/images/profile.png" alt="Profile" class="w-11 h-11 block" />
           </div>
         </div>
       </LiquidGlass>

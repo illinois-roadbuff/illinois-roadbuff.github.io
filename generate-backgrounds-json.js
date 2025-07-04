@@ -16,4 +16,4 @@ const files = fs
   .map(file => `/backgrounds/${file}`)
 
 fs.writeFileSync(output, JSON.stringify(files, null, 2))
-console.log(`✅ Generated backgrounds.json with ${files.length} entries`)
+console.log(`Generated backgrounds.json with ${files.length} entries`)
