@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "generate:backgrounds": "node generate-backgrounds-json.js"
+    "generate:backgrounds": "node generate-backgrounds-json.js",
+    "packageManager": "pnpm@8.6.7"
   },
   "dependencies": {
     "@iconify-json/simple-icons": "^1.2.41",
