@@ -1,4 +1,4 @@
-name: Deploy Nuxt site to GitHub Pages
+name: Deploy Nuxt site to Pages
 
 on:
   push:
@@ -10,53 +10,95 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v3
+      # Setup Node.js without caching (because caching pnpm requires pnpm installed)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Install build dependencies for native modules
-        run: sudo apt-get update && sudo apt-get install -y build-essential python3
-
+      # Install pnpm globally so pnpm commands can run later
       - name: Install pnpm globally
         run: npm install -g pnpm
 
-      - name: Install dependencies with pnpm
-        run: pnpm install
+      # Detect package manager after pnpm installed
+      - name: Detect package manager
+        id: detect-package-manager
+        run: |
+          if [ -f "pnpm-lock.yaml" ]; then
+            echo "manager=pnpm" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "yarn.lock" ]; then
+            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "package-lock.json" ]; then
+            echo "manager=npm" >> $GITHUB_OUTPUT
+            echo "command=ci" >> $GITHUB_OUTPUT
+            exit 0
+          else
+            echo "Unable to determine package manager"
+            exit 1
+          fi
 
-      - name: Rebuild better-sqlite3 native bindings
-        run: pnpm rebuild better-sqlite3
+      # Cache pnpm store only if pnpm detected
+      - name: Cache pnpm store
+        if: steps.detect-package-manager.outputs.manager == 'pnpm'
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-      - name: Build Nuxt site with Nitro preset for GitHub Pages
-        env:
-          NITRO_PRESET: github_pages
-        run: pnpm run build
+      # Setup GitHub Pages configuration
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          static_site_generator: nuxt
 
-      - name: Upload artifact for GitHub Pages
+      # Restore Nuxt build cache (dist and .nuxt folders)
+      - name: Restore build cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            dist
+            .nuxt
+          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('pnpm-lock.yaml', 'package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-nuxt-build-
+
+      # Install dependencies using the detected package manager
+      - name: Install dependencies
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
+      # Generate the static site using Nuxt
+      - name: Generate static site
+        run: ${{ steps.detect-package-manager.outputs.manager }} run generate
+
+      # Upload the generated static site artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .output/public
+          path: ./.output/public
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
-    permissions:
-      pages: write
-      id-token: write
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
