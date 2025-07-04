@@ -1,5 +1,5 @@
 name: Deploy Nuxt site to Pages
-
+# LET ME USE PNPM!!!!!!!!!!!!!!
 on:
   push:
     branches: ["master"]
@@ -48,7 +48,6 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
       - name: Install pnpm globally
-        if: steps.detect-package-manager.outputs.manager == 'pnpm'
         run: npm install -g pnpm
 
       - name: Cache pnpm store
