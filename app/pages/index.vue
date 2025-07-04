@@ -1,13 +1,8 @@
-<script setup>
-import { onMounted } from 'vue'
-
-onMounted(() => {
-  if (import.meta.client) {
-    window.location.href = '/home' 
-  }
-})
-</script>
-
 <template>
-  <p>Redirecting to /home...</p>
-</template>
+    <Home />
+   </template>
+   
+   <script setup lang="ts">
+   import Home from '~/components/Home.vue'
+   </script>
+   
