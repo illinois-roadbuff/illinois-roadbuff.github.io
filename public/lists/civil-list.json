@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "title": "Design of a segment in the Interstate 55/80 revamp",
+      "author": "Illinois_Roadbuff",
+      "snippet": "Similar to something one would see in a civil engineering design study.",
+      "pdfUrl": "/pdfs/civil/crossroads-55-80-revamp-1.pdf",
+      "dateStart": "N/A",
+      "dateEnd": "N/A",
+      "thumbnail": "/thumbnails/civil/crossroads-55-80-revamp-1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Complex interchange in ReRoute universe",
+      "author": "Illinois_Roadbuff",
+      "snippet": "Complex interchange in the fictional ReRoute universe.",
+      "pdfUrl": "/pdfs/messages/not-available.pdf", 
+      "dateStart": "N/A",
+      "dateEnd": "April 14, 2024",
+      "thumbnail": "/thumbnails/messages/not-available.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Old design of a segment in the Interstate 55/80 revamp",
+      "author": "Illinois_Roadbuff",
+      "snippet": "Similar to something one would see in a civil engineering design study.",
+      "pdfUrl": "/pdfs/civil/old-crossroads-55-80-revamp.pdf",
+      "dateStart": "N/A",
+      "dateEnd": "N/A",
+      "thumbnail": "/thumbnails/civil/old-crossroads-55-80-revamp.jpg"
+    }
+  ]
+  
