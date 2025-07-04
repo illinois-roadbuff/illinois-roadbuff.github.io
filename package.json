@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "generate:backgrounds": "node generate-backgrounds-json.js",
-    "deploy": "npx nuxt build --preset github_pages && npx gh-pages --dotfiles -d .output/public "
+    "deploy": "npx nuxt build --preset github_pages && npx gh-pages --dotfiles -d .output/public ",
+    "test": "npx nuxt build --preset github_pages && npx serve .output/public "
   },
   "dependencies": {
     "@iconify-json/simple-icons": "^1.2.41",
