@@ -2,7 +2,7 @@ name: Deploy Nuxt site to Pages
 
 on:
   push:
-    branches: ["f*** g1thub actions"]
+    branches: ["f*** g1thub actions; problems after problems i can't ******* take it anymore"]
   workflow_dispatch:
 
 permissions:
