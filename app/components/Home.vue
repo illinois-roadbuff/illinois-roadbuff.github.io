@@ -23,8 +23,8 @@
               Use the top navigation bar to view different pages. P.S. deploying this on Github took me more than five hours to figure out and now I'm typing here 5 AM in the morning (F*** GitHub Actions).
             </p>
             <p class="text-base RG2014EEM">
-              <<NuxtLink 
-                to="/portfolio/works"
+              <NuxtLink 
+                to="/math/studs"
                
                 class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
               >
