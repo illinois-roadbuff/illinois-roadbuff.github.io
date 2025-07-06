@@ -2,7 +2,7 @@ name: Deploy Nuxt site to Pages
 
 on:
   push:
-    branches: ["master"]
+    branches: ["f*** g1thub actions; problems after problems i can't ******* take it anymore"]
   workflow_dispatch:
 
 permissions:
@@ -21,17 +21,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Setup Node.js without caching (because caching pnpm requires pnpm installed)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      # Install pnpm globally so pnpm commands can run later
       - name: Install pnpm globally
         run: npm install -g pnpm
 
-      # Detect package manager after pnpm installed
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -52,7 +49,6 @@ jobs:
             exit 1
           fi
 
-      # Cache pnpm store only if pnpm detected
       - name: Cache pnpm store
         if: steps.detect-package-manager.outputs.manager == 'pnpm'
         uses: actions/cache@v4
@@ -62,13 +58,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      # Setup GitHub Pages configuration
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: nuxt
 
-      # Restore Nuxt build cache (dist and .nuxt folders)
       - name: Restore build cache
         uses: actions/cache@v4
         with:
@@ -79,15 +73,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nuxt-build-
 
-      # Install dependencies using the detected package manager
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
-      # Generate the static site using Nuxt
       - name: Generate static site
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
 
-      # Upload the generated static site artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

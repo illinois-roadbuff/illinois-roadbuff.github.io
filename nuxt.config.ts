@@ -18,18 +18,16 @@ export default defineNuxtConfig({
   
  },
 
-  future: {
-    compatibilityVersion: 4,
-  },
+
 
   modules: [
-   // '@nuxt/content',
+    '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/test-utils',
-   // '@nuxt/ui',
+    '@nuxt/ui',
     '@nuxt/fonts',
     '@nuxtjs/tailwindcss'
   ],
