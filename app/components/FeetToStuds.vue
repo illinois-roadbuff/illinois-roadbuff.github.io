@@ -199,6 +199,33 @@
             <p v-if="copyStatus.studsMetric" class="text-green-500 text-xs select-none">Copied to clipboard</p>
           </div>
         </div>
+        <!-- Percent Slope to Degrees Converter -->
+<hr class="mt-4 border-t border-white/60" />
+<div>
+  <label for="percentSlope" class="block font-medium mb-1 RG2014E">PERCENT SLOPE → DEGREES</label>
+  <input
+    id="percentSlope"
+    v-model.number="percentSlope"
+    type="number"
+    placeholder="Enter percent slope"
+    class="w-full border p-2 rounded mb-2"
+  />
+  <div class="flex flex-col items-center space-y-1">
+    <div class="flex justify-center items-center space-x-2">
+      <p v-if="!isNaN(slopeDegrees)" class="font-mono text-lg select-text">
+        ≈ <span class="font-math">{{ slopeDegrees }}</span>°
+      </p>
+      <button
+        @click="copyToClipboard(slopeDegrees.toString(), 'percentSlope')"
+        class="px-2 py-1 text-sm bg-blue-500 hover:bg-blue-600 text-white rounded"
+      >
+        Copy
+      </button>
+    </div>
+    <p v-if="copyStatus.percentSlope" class="text-green-500 text-xs select-none">Copied to clipboard</p>
+  </div>
+</div>
+
       </div>
     </div>
   </div>
@@ -243,6 +270,13 @@ const studsToFeet = computed(() => studs.value * feetPerStud.value)
 const metersToStuds = computed(() => meters.value / customMetersPerStud.value)
 const cmToStuds = computed(() => (centimeters.value / 100) / customMetersPerStud.value)
 const studsToMeters = computed(() => studsMetric.value * customMetersPerStud.value)
+
+const percentSlope = ref(0)
+
+const slopeDegrees = computed(() => {
+  return Math.atan(percentSlope.value / 100) * (180 / Math.PI)
+})
+
 
 function copyToClipboard(text: string, key: keyof typeof copyStatus) {
   navigator.clipboard.writeText(text).then(() => {
