@@ -244,7 +244,7 @@ const chicagoInfo = computed(() => getChicagoTimeInfo())
             <hr class="my-4 border-t border-[#b87333]/60" />
             <p class="text-1xl RG2014EM text-white/85">Works</p>
             <p class="text-base RG2014EEM">
-              <<NuxtLink 
+              <NuxtLink 
                 to="/portfolio/works"
                
                 class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
