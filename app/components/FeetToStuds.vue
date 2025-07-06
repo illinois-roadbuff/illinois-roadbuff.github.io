@@ -199,7 +199,11 @@
             <p v-if="copyStatus.studsMetric" class="text-green-500 text-xs select-none">Copied to clipboard</p>
           </div>
         </div>
-        <!-- Percent Slope to Degrees Converter -->
+  
+
+      </div>
+
+            <!-- Percent Slope to Degrees Converter -->
 <hr class="mt-4 border-t border-white/60" />
 <div>
   <label for="percentSlope" class="block font-medium mb-1 RG2014E">PERCENT SLOPE → DEGREES</label>
@@ -225,8 +229,6 @@
     <p v-if="copyStatus.percentSlope" class="text-green-500 text-xs select-none">Copied to clipboard</p>
   </div>
 </div>
-
-      </div>
     </div>
   </div>
 </main>
