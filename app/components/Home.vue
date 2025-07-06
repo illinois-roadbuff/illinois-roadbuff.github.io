@@ -22,6 +22,15 @@
             <p class="text-1xl RG2014EM text-white/85 text-1xl">
               Use the top navigation bar to view different pages. P.S. deploying this on Github took me more than five hours to figure out and now I'm typing here 5 AM in the morning (F*** GitHub Actions).
             </p>
+            <p class="text-base RG2014EEM">
+              <<NuxtLink 
+                to="/portfolio/works"
+               
+                class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
+              >
+                View my Stud Converter ↗
+              </NuxtLink>
+            </p>
           </div>
         </div>
 
