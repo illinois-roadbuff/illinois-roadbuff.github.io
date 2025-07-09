@@ -19,7 +19,7 @@
               <li class="text-[#efb680]/85">
                 <a class="RG2014EM">Crossroads Universe</a> ➔
                 <a
-                  href="https://www.openstreetmap.org/relation/112927"
+                  href="https://www.roblox.com/games/8233185144"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
@@ -30,7 +30,7 @@
               <li class="text-[#efb680]/85">
                 <a class="RG2014EM">Open-road Classics</a> ➔
                 <a
-                  href="https://www.openstreetmap.org/relation/112927"
+                  href="https://www.roblox.com/communities/16463203/Illinois-Roadbuffs-Development#!/about"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
@@ -72,12 +72,12 @@
               <li class="text-[#efb680]/85">
                 <a class="RG2014EM">Reroute Universe</a> ➔
                 <a
-                  href="https://www.openstreetmap.org/relation/112927"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
                 >
-                  in-progress ↗
+                  in-progress (soon) ↗
                 </a>
               </li>
             </ul>
