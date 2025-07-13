@@ -184,7 +184,7 @@ const chicagoInfo = computed(() => getChicagoTimeInfo())
             <ul class="list-disc px-5 RG2014E text-white/70 text-base">
               <li class="text-[#efb680]/85"><a class="RG2014EM">Roadgeeking</a></li>
               <li class="text-[#efb680]/85">
-                <a class="RG2014EM">Developing</a> ➔ <a class="text-white/70">full-stack</a> ➔ <a class="text-white/70">.luau</a>
+                <a class="RG2014EM">Developing</a> ➔ <a class="text-white/70">front + backend</a> ➔ <a class="text-white/70">.luau</a>
               </li>
               <li class="text-[#efb680]/85">
                 <a class="RG2014EM">Conceptual</a> ➔ <a class="text-white/70">technology, civil engineering</a>
