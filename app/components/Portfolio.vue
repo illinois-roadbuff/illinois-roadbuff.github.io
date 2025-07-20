@@ -215,7 +215,9 @@ const chicagoInfo = computed(() => getChicagoTimeInfo())
             </ul>
 
             <hr class="my-4 border-t border-[#b87333]/60" />
-            <p class="text-1xl RG2014EM text-white/85">Positions</p>
+            <p class="text-1xl RG2014EM text-white/85">Positions¹</p>
+             <p class="text-base RG2014D text-[#e7a977]/70">¹ does not reflect status in irl; that's separate</p>
+            
             <p class="text-base RG2014D text-[#e7a977]/60">CURRENT</p>
             <ul class="list-disc px-5 RG2014E text-white/70 text-base">
               <li class="text-[#efb680]/85">
