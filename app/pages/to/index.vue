@@ -18,7 +18,11 @@ const socials: Record<SocialKey, string> = {
    bandcamp: 'https://illinois-roadbuff.bandcamp.com/',
 
    roblox: 'https://www.roblox.com/users/2653606809/profile',
+<<<<<<< HEAD
    ccinfoYT_SA: 'https://docs.google.com/document/d/17ozCDKdWHHSHTJZHjzphMd4Zi09-evfGzhiaU8dy-Xk/edit?tab=t.0',
+=======
+   ccinfoYT_SA: 'https://docs.google.com/document/d/1VLhwc8GuXSwWcvJ3ZNYKTFqPnW7jlb_i8ZVz8w14lto/edit?usp=sharing',
+>>>>>>> origin/master
  
   
  
@@ -65,4 +69,8 @@ onMounted(() => {
       </tbody>
     </table>
   </main>
+<<<<<<< HEAD
 </template>
+=======
+</template>
+>>>>>>> origin/master
