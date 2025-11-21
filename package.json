@@ -1,0 +1,48 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module", 
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "generate:backgrounds": "node generate-backgrounds-json.js",
+    "deploy": "npx nuxt build --preset github_pages && npx gh-pages --dotfiles -d .output/public ",
+    "test": "npx nuxt build --preset github_pages && npx serve .output/public ",
+"create:fork-friendly": "git checkout master && (git checkout fork-friendly || git checkout -b fork-friendly) && git merge master && git rm -r --cached public && git commit -m \"Update fork-friendly branch\" || echo 'No changes' && git push -u origin fork-friendly && git checkout master",
+  
+  "deploy:ff": "npx nuxt build --preset github_pages && npx gh-pages --dotfiles -d .output/public && git checkout master && (git checkout fork-friendly || git checkout -b fork-friendly) && git merge master && git rm -r --cached public && git commit -m \"Update fork-friendly branch\" || echo 'No changes' && git push -u origin fork-friendly && git checkout master"
+
+  },
+  "dependencies": {
+    "@iconify-json/simple-icons": "^1.2.41",
+    "@nuxt/content": "3.6.1",
+    "@nuxt/eslint": "1.4.1",
+    "@nuxt/fonts": "0.11.4",
+    "@nuxt/icon": "1.15.0",
+    "@nuxt/image": "1.10.0",
+    "@nuxt/scripts": "0.11.8",
+    "@nuxt/test-utils": "3.19.1",
+    "@nuxt/ui": "3.2.0",
+    "@unhead/vue": "^2.0.11",
+    "@vue/reactivity": "^3.5.17",
+    "@wxperia/liquid-glass-vue": "^1.0.9",
+
+    "better-sqlite3": "^12.2.0",
+    "eslint": "^9.30.0",
+    "liquid-glass-vue": "^0.0.1",
+    "typescript": "^5.8.3",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "7.0.0-beta.0",
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
+    "nuxt": "^v4.0.0-alpha.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
+  }
+}
