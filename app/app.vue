@@ -102,7 +102,7 @@ onMounted(async () => {
     <footer class="footer RG2014EEM text-base">
       <p>
         © 2025 Illinois_Roadbuff. Source code licensed under 
-        <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="underline hover:text-white">
+        <a href="https://www.gnu.org/licenses/agpl-3.0.md" target="_blank" class="underline hover:text-white">
           AGPL-3.0-or-later
         </a>. 
         All images, content, or other media are copyrighted and may not be redistributed, reused, or copied in any form without explicit written approval from Illinois_Roadbuff.
