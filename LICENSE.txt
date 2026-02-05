@@ -7,4 +7,4 @@ These assets shall not be redistributed, reused, or copied in any form
 without explicit written approval from Illinois_Roadbuff.
 
 This restriction does NOT apply to the source code in this repository,
-which is licensed separately under LICENSE-CODE (Apache License 2.0).
+which is licensed separately under LICENSE-CODE (AGPL-3.0-or-later).

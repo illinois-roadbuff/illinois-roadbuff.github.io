@@ -103,9 +103,9 @@ onMounted(async () => {
       <p>
         © 2025 Illinois_Roadbuff. Source code licensed under 
         <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" class="underline hover:text-white">
-          Apache License 2.0
+          AGPL-3.0-or-later
         </a>. 
-        All images, content, or other media are copyrighted and may not be redistributed, reused, or copied in any form without explicit written approval from Illinois_Roadbuff. illinois_roadbuff/center@0.1.0-alpha.1
+        All images, content, or other media are copyrighted and may not be redistributed, reused, or copied in any form without explicit written approval from Illinois_Roadbuff.
       </p>
     </footer>
   </client-only>

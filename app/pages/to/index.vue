@@ -3,7 +3,7 @@ import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
 
-type SocialKey = 'discord' | 'github' | 'youtube' | 'codeberg' | 'guilded' | 'apple' | 'robloxdev' | 'roblox' | 'wikipedia' | 'bandcamp' 
+type SocialKey = 'discord' | 'github' | 'youtube' | 'codeberg' | 'guilded' | 'apple' | 'robloxdev' | 'roblox' | 'wikipedia' | 'bandcamp' | 'ccinfoYT_SA'
 
 const socials: Record<SocialKey, string> = {
     github: 'https://github.com/illinois-roadbuff',
@@ -18,6 +18,9 @@ const socials: Record<SocialKey, string> = {
    bandcamp: 'https://illinois-roadbuff.bandcamp.com/',
 
    roblox: 'https://www.roblox.com/users/2653606809/profile',
+
+   ccinfoYT_SA: 'https://docs.google.com/document/d/17ozCDKdWHHSHTJZHjzphMd4Zi09-evfGzhiaU8dy-Xk/edit?tab=t.0',
+
  
   
  
@@ -64,4 +67,6 @@ onMounted(() => {
       </tbody>
     </table>
   </main>
+
 </template>
+

@@ -7,4 +7,4 @@ text, images, icons, or other media) created by Illinois_Roadbuff
 and may not be copied, redistributed, or modified without 
 explicit permission.
 
-All original source code is licensed under the Apache License 2.0.
+All original source code is licensed under the AGPL-3.0-or-later.
