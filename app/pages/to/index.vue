@@ -3,7 +3,7 @@ import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
 
-type SocialKey = 'discord' | 'github' | 'youtube' | 'codeberg' | 'guilded' | 'apple' | 'robloxdev' | 'roblox' | 'wikipedia' | 'bandcamp' | 'ccinfoYT_SA'
+type SocialKey = 'discord' | 'github' | 'youtube' | 'codeberg' | 'guilded' | 'apple' | 'robloxdev' | 'roblox' | 'wikipedia' | 'bandcamp' | 'ccinfoYT_SA' | `commons` | `archive`
 
 const socials: Record<SocialKey, string> = {
     github: 'https://github.com/illinois-roadbuff',
@@ -12,7 +12,7 @@ const socials: Record<SocialKey, string> = {
     
   discord: 'https://discord.gg/sd4XfAqNF9',
    youtube: 'https://youtube.com/channel/UC4m6UbZf3cXzD16KONdX3aw/',
-   apple: 'https://developer.apple.com/forums/profile/Illinois_Roadbuff',
+    apple: 'https://developer.apple.com/forums/profile/Illinois_Roadbuff', 
    robloxdev: 'https://devforum.roblox.com/u/illinois_roadbuff/',
    wikipedia: 'https://en.wikipedia.org/w/index.php?title=User:Illinois-Roadbuff',
    bandcamp: 'https://illinois-roadbuff.bandcamp.com/',
@@ -22,7 +22,9 @@ const socials: Record<SocialKey, string> = {
    ccinfoYT_SA: 'https://docs.google.com/document/d/17ozCDKdWHHSHTJZHjzphMd4Zi09-evfGzhiaU8dy-Xk/edit?tab=t.0',
 
  
-  
+  commons: `https://commons.wikimedia.org/wiki/User:Illinois-Roadbuff`,
+
+  archive: `https://archive.org/details/@illinois_roadbuff`
  
 }
 
