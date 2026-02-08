@@ -28,9 +28,9 @@
                 >View ↗</a>
               </li>
               <li class="text-[#efb680]/85">
-                <a class="RG2014EM">Astute-Corrider Initiative</a> ➔
+                <a class="RG2014EM">Project Roadwork (Open Source Software)</a> ➔
                 <a
-                  href="https://codeberg.org/Astute-Corridor"
+                  href="https://codeberg.org/project-roadwork"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="text-[#d98e55]/85 hover:text-[#e7a977] transition-colors duration-200"
