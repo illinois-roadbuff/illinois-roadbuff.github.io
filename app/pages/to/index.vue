@@ -3,7 +3,7 @@ import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
 
-type SocialKey = 'discord' | 'github' | 'youtube' | 'codeberg' | 'guilded' | 'apple' | 'robloxdev' | 'roblox' | 'wikipedia' | 'bandcamp' | 'ccinfoYT_SA' | `commons` | `archive`
+type SocialKey = 'discord' | 'github' | 'youtube' | 'codeberg' | 'guilded' | 'apple' | 'robloxdev' | 'roblox' | 'wikipedia' | 'bandcamp' | 'ccinfoYT_SA' | `commons` | `archive` | 'polytoria' | 'discordid'
 
 const socials: Record<SocialKey, string> = {
     github: 'https://github.com/illinois-roadbuff',
@@ -24,7 +24,10 @@ const socials: Record<SocialKey, string> = {
  
   commons: `https://commons.wikimedia.org/wiki/User:Illinois-Roadbuff`,
 
-  archive: `https://archive.org/details/@illinois_roadbuff`
+  archive: `https://archive.org/details/@illinois_roadbuff`,
+  polytoria: `https://polytoria.com/u/Illinoisan`,
+
+  discordid: `https://discordapp.com/users/1168278231741382750`,
  
 }
 
