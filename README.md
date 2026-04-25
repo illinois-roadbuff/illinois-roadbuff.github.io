@@ -2,7 +2,7 @@
 My first Nuxt app! It is kind of messy though so I don't recommend using it... If so, you MUST make your own public folder and use `pnpm run generate:backgrounds`. Unfortunately, I had to move some files from app/ to root so one may have to modify some of the scripts.
 
 ## License
-Source code is licensed under the Apache License 2.0. However, all images, documents, content, or other media are copyrighted and may not be redistributed, reused, or copied in any form without explicit written permission from Illinois_Roadbuff.
+Source code is licensed under the AGPL-3.0-or-later. However, all images, documents, content, or other media are copyrighted and may not be redistributed, reused, or copied in any form without explicit written permission from Illinois_Roadbuff.
 
 ---
 
